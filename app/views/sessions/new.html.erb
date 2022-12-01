@@ -1,0 +1,39 @@
+<section class="vh-100" style="background-color: #508bfc;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <h3 class="mb-5">Sign in</h3>
+           <%=form_with url: sign_in_path , scope: :user do |form|%>  <div>
+            <div class="form-outline mb-4">
+              <%= form.email_field :email, required: true ,class:"form-control" , placeholder: "Email" %>
+            </div>
+
+            <div class="form-outline mb-4">
+              <%= form.password_field :password, required: true ,class:"form-control" , placeholder: "Email"  %>
+
+            </div>
+
+            <!-- Checkbox -->
+          
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+
+            <hr class="my-4">
+             <div>
+              <p class="mb-0">Don't have an account? <%=link_to "Sign Up" ,sign_up_path, class: "nav-link fw-bold"  %></a>
+      
+              </p>
+            </div>
+          <%end%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
