@@ -1,7 +1,7 @@
 
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar navbar-light bg-light">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
@@ -25,6 +25,9 @@
       </a>
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     <a class="navbar-brand mt-2 mt-lg-0" href="#">
+         <a class="nav-link" href="#">Store</a>
+      </a>
         <li class="nav-item">
           <a class="nav-link" href="#">Dashboard</a>
         </li>
@@ -32,7 +35,7 @@
           <a class="nav-link" href="#">Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
+          <%=link_to "products" , pages_path , class:"nav-link"%>
         </li>
       </ul>
       <!-- Left links -->
@@ -49,11 +52,25 @@
          <%=link_to "Log In" ,sign_in_path ,class:"nav-link" %>
         </li>
       </ul>
-
+   <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+         <%=link_to "Sign Up" ,register_path ,class:"nav-link btn btn-secondary"%>
+        </li>
+      </ul>
 </nav>
 <!-- Navbar -->
 
-
+<!-- Background image -->
+<div
+  class="bg-image d-flex justify-content-center align-items-center"
+  style="
+    background-image: url('https://storefront-api.p1.store.net.sap/medias/Publish-btn1-compressed.jpg?context=bWFzdGVyfHJvb3R8NTQ0ODJ8aW1hZ2UvanBlZ3xoMDUvaGNkLzg4ODMyMjAxODUxMTgvUHVibGlzaF9idG4xLWNvbXByZXNzZWQuanBnfGE0MTlkMWYwYjZmYWY3ODdlYmM5ZWQxODc0MTI5YjhjZGY1M2U5MmNlZmQ4NWJmMGUzZjA1Y2I3ZWFjYzg0N2I');
+    height: 50vh;
+  "
+>
+  <h1 class="text-white">Our Store</h1>
+</div>
+<!-- Background image -->
 
 
 

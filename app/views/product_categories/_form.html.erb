@@ -1,0 +1,11 @@
+<%= form_with(model: @product_category) do |category|  %>
+
+
+<div class = "form">
+
+<%=category.select("post", ProductCategory.all.collect {|p| [p.category_id ] }, {prompt: 'Select Category'}) %> 
+<%=category.select("post", ProductCategory.all.collect {|p| [p.product_id ] }, {prompt: 'Select Category'}) %> 
+</br>
+<%= category.submit  class:"btn btn-secondary"%>
+</div>
+<%end%>

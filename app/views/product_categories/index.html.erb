@@ -1,0 +1,39 @@
+<%= render 'layouts/shared/side_menu'%>
+
+<div class="body_class">
+
+
+<table class="table align-middle mb-0 bg-white table-hover">
+  <thead class="bg-light">
+    <tr class="table-active">
+      <th>Category Name</th>
+      <th>Product_Name</th>
+      <th class="text-center">Action</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   <%@product_category.each do |row|%> 
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <div class="ms-3">
+            <p class="fw-bold mb-1"><%=row.category.name%></p>
+          </div>
+        </div>
+      </td>
+          <td>
+        <div class="d-flex align-items-center">
+          <div class="ms-3">
+            <p class="fw-bold mb-1"><%=row.product.name%></p>
+          </div>
+        </div>
+      </td>
+
+  <%end%> 
+  </tbody>
+</table>
+<div class="btn-position"></div>
+ <%=link_to "Create Category ", new_product_category_path , class:"btn btn-secondary btn-
+ lg btn-rounded"%>
+</div>

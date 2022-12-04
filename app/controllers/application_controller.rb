@@ -9,5 +9,12 @@ class ApplicationController < ActionController::Base
 		session.delete(:user_id)
 		@current_user = nil
 	end
-	
+	def admin_only
+		unless current_user.admin?
+			unless @user == current_user
+				flash.now[:notice] = "access denied"
+				redirect_to sign_in_path
+			end  
+		end
+	end
 end

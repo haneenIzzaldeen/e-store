@@ -1,0 +1,42 @@
+<%= render 'layouts/shared/header'%>
+
+<%= link_to "Log out", sign_out_path, method: "delete" %>
+<%= link_to "order", pages_path%>
+<%= link_to "all", root_path%>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+   
+      <%@product.each do |row|%>
+       <div class="card">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
+      <div class="card-body">
+        <h5 class="card-title"><%=row.name%></h5>
+        <p class="card-text">
+          <%=row.description%>
+        </p>
+         <p class="card-text">
+          <%=row.price%>
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <%end%>
+
+
+
+  <%@category.each do |row|%>
+  
+
+
+      <td class="text-center">
+       
+  <%=link_to row.name, page_path(row) %>
+
+
+      </td>
+    </tr>
+ <%end%>
+  

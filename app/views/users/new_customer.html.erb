@@ -1,0 +1,17 @@
+<%= form_with url: sign_up_path , scope: :user do |user|  %>
+
+
+<div class = "form">
+<%=  user.label :name ,  class:"form-label" %>
+<%= user.text_field :name , class:"form-control" %>
+
+<%= user.label :email ,  class:"form-label"%>
+<%= user.text_field :email , class:"form-control" %>
+
+<%= user.label :password ,  class:"form-label"%>
+<%= user.text_field :password , class:"form-control" %>
+
+</br>
+<%= user.submit  class:"btn btn-secondary"%>
+</div>
+<%end%>

@@ -9,12 +9,11 @@ class SessionsController < ApplicationController
 
 				case @user.role
 				when 'admin'
-					
 				    redirect_to admin_home_path
 				when 'customer'
 					redirect_to root_path 
 				when 'owner'
-					redirect_to root_path
+					redirect_to owner_home_path
 			end
 	
 		else 

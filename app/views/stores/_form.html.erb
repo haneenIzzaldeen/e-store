@@ -1,0 +1,14 @@
+<%= form_with(model: @store) do |store|  %>
+
+
+<div class = "form">
+<%= store.label :name ,  class:"form-label" %>
+<%= store.text_field :name , class:"form-control" %>
+
+<%= store.label :user_id ,  class:"form-label" %>
+<%= store.text_field :user_id , class:"form-control" %>
+
+</br>
+<%= store.submit  class:"btn btn-secondary"%>
+</div>
+<%end%>

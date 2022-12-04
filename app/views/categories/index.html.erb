@@ -7,14 +7,12 @@
   <thead class="bg-light">
     <tr class="table-active">
       <th>Name</th>
-      <th>Email</th>
-      <th>Role</th>
       <th class="text-center">Action</th>
       
     </tr>
   </thead>
   <tbody>
-  <%@users.each do |row|%>
+  <%@categories.each do |row|%>
     <tr>
       <td>
         <div class="d-flex align-items-center">
@@ -29,23 +27,21 @@
           </div>
         </div>
       </td>
-      <td>
-        <p class="fw-normal mb-1"><%=row.email%></p>
-      </td>
-      <td>
-        <p class="fw-normal mb-1"><%=row.role%></p>
-      </td>
+
+
+
       <td class="text-center">
-         <%=link_to "Show ", user_path(row) , class:"btn btn-success btn-sm btn-rounded"%>
-         <%=link_to "Edit user ", edit_user_path(row) ,class:"btn btn-primary btn-sm btn-rounded"%>
+         <%=link_to "show ", category_path(row) , class:"btn btn-success btn-sm btn-rounded"%>
+
+         <%=link_to "Edit Category ", edit_category_path(row) ,class:"btn btn-primary btn-sm btn-rounded"%>
        
-         <%=link_to "Delete User", row, data: {'turbo-method': :delete  , turbo_confirm: 'Are you sure?'},class:"btn btn-danger btn-sm btn-rounded"%></td>
+         <%=link_to "delete Category", row, data: {'turbo-method': :delete  , turbo_confirm: 'Are you sure?'},class:"btn btn-danger btn-sm btn-rounded"%></td>
       </td>
     </tr>
  <%end%>
   </tbody>
 </table>
 <div class="btn-position"></div>
- <%=link_to "Create User ", new_user_path , class:"btn btn-secondary btn-
+ <%=link_to "Create Category ", new_category_path , class:"btn btn-secondary btn-
  lg btn-rounded"%>
 </div>
